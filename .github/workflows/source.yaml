@@ -12,5 +12,5 @@ jobs:
       - uses: guardian/actions-source-analysis@main
       - uses: actions/upload-artifact@v2
         with:
-					name: source-analysis
-					path: .source/source-analysis.json
+          name: source-analysis
+          path: .source/source-analysis.json
