@@ -1,12 +1,16 @@
 name: CI
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 jobs:
-    source:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: guardian/actions-setup-node@main
-            - uses: guardian/actions-source-analysis@main
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: guardian/actions-setup-node@main
+      - uses: guardian/actions-source-analysis@main
+      - uses: actions/upload-artifact@v2
+        with:
+					name: source-analysis
+					path: .source/source-analysis.json
