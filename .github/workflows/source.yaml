@@ -1,0 +1,13 @@
+name: CI
+on:
+    push:
+        branches:
+            - main
+jobs:
+    source:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: guardian/actions-setup-node@main
+            - uses: bahmutov/npm-install@v1
+            - uses: guardian/actions-source-analysis@main
