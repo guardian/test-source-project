@@ -7,7 +7,7 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@main
       - uses: guardian/actions-source-analysis@main
       - uses: actions/upload-artifact@v2
