@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: guardian/actions-setup-node@main
       - uses: guardian/actions-source-analysis@main
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: source-analysis
           path: .source/output/
